@@ -4,7 +4,8 @@
   "description": "AELYT - Audio-only Electron-based Youtube-player",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
   "bugs": {
     "url": "https://github.com/aenany/aelyt/issues"
   },
-  "homepage": "https://github.com/aenany/aelyt#readme"
+  "homepage": "https://github.com/aenany/aelyt#readme",
+  "dependencies": {
+    "electron": "^1.6.11"
+  }
 }
