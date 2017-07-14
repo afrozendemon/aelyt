@@ -20,7 +20,11 @@
     "music",
     "player",
     "open",
-    "source"
+    "source",
+    "windows",
+    "mac",
+    "linux",
+    "cross-platform"
   ],
   "author": "aenany",
   "license": "ISC",
