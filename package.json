@@ -33,9 +33,6 @@
   },
   "homepage": "https://github.com/aenany/aelyt#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
-    "electron": "^1.6.11",
-    "jquery": "^3.2.1",
-    "please-wait": "0.0.5"
+    "electron": "^1.6.11"
   }
 }
