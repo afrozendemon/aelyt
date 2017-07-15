@@ -1,0 +1,37 @@
+{
+  "name": "aelyt",
+  "description": "AELYT - Audio-only Electron-based Youtube-player",
+  "main": "main.js",
+  "authors": [
+    "aenany"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "electron",
+    "youtube",
+    "audio",
+    "https",
+    "stream",
+    "music",
+    "player",
+    "open",
+    "source",
+    "windows",
+    "mac",
+    "linux",
+    "cross-platform"
+  ],
+  "homepage": "https://github.com/aenany/aelyt",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "please-wait": "^0.0.5"
+  }
+}

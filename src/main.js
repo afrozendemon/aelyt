@@ -1,10 +1,6 @@
 // main.js
 // execution of electron app here
 
-var bootstrap = require('bootstrap');
-var jQuery = require('jquery');
-var pleaseWait = require('please-wait');
-
 const {app, BrowserWindow} = require('electron');
 let mainWindow;
 
