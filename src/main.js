@@ -1,8 +1,11 @@
 // main.js
 // execution of electron app here
 
-const {app, BrowserWindow} = require('electron');
+var bootstrap = require('bootstrap');
+var jQuery = require('jquery');
+var pleaseWait = require('please-wait');
 
+const {app, BrowserWindow} = require('electron');
 let mainWindow;
 
 // Quit when all windows are closed.
