@@ -3,6 +3,8 @@
 
 const {app, BrowserWindow} = require('electron');
 
+var mainplayer = require('./player.js');
+
 let mainWindow;
 
 // Quit when all windows are closed.
@@ -15,6 +17,8 @@ app.on('window-all-closed', function() {
 // This method will be called when Electron has done everything
 // initialization and ready for creating browser windows.
 app.on('ready', function() {
+
+  mainplayer.printMessage();
   // Create the browser window.
   mainWindow = new BrowserWindow({width: 800, height: 600});
 
