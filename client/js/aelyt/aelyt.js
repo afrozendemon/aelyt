@@ -10,3 +10,7 @@ document.getElementById("clickButton").addEventListener("click", function(){
     })
     ipcRenderer.send('asynchronous-message', 'ping')
 }); 
+
+$(document).on('ready', function(){
+  console.log('DOM content loaded')
+})
