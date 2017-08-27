@@ -3,7 +3,8 @@
 
 const {app, BrowserWindow} = require('electron');
 
-var mainplayer = require('./player.js');
+let mainplayer = require('./player.js');
+let eventhandler = require('./eventhandler.js');
 
 let mainWindow;
 
