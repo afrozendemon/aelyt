@@ -33,6 +33,12 @@
   },
   "homepage": "https://github.com/aenany/aelyt#readme",
   "dependencies": {
-    "electron": "^1.6.11"
+    "electron": "^1.6.11",
+    "lame": "^1.2.4",
+    "speaker": "^0.3.1",
+    "youtube-audio-stream": "0.0.50"
+  },
+  "devDependencies": {
+    "electron-rebuild": "^1.6.0"
   }
 }
