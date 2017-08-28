@@ -8,36 +8,64 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="client/css/boostrap/bootstrap.min.css"/>
 
-   <!-- Imported Darkly Theme -->
+    <!-- Imported Darkly Theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap-theme.min.css"/>
   </head>
-  
+    
   <body background-color: #fff;>
-
-    <div class="main">
-      <h1>Hello, world!</h1>
-      <h2>Ahmad Enany and Jason Kang</h2>
+    <div class="jumbotron text-center">
+      <h1>Electron App</h1>
+      <p>Ahmad Enany and Jason Kang</p>  
     </div>
-    
-    <div class="horizontal-bar">
-        <a href="#" class="horizontal-hover">Home</a>
-        <a href="#" class="horizontal-hover">Link 1</a>
-        <a href="#" class="horizontal-hover">Link 2</a>
-        <a href="#" class="horizontal-hover">Link 3</a>
+      
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Music</a>
       </div>
-  
-    <div>
-      <button id="clickButton" class="button btn btn-primary"> CLICK ME TO SIGNAL TO THE MAIN PROCESS </button>
-    </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li>
+        </ul>
+          <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                  </form>
+                </div>
+              </nav>
 
-    <div>
-      <button id="playButton" class="button btn btn-primary"> play button </button>
-    </div>
-
+        <div class="container">
+            <div class="row">
+              <div class="col-sm-4">
+                <h3>Column 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>Column 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              </div>
+              <div class="col-sm-4">
+                <h3>Column 3</h3>        
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+              </div>
+            </div>
     
+      <div>
+        <button id="clickButton" class="button btn btn-primary"> CLICK ME TO SIGNAL TO THE MAIN PROCESS </button>
+      </div>
 
+      <div>
+        <button id="playButton" class="button btn btn-primary"> play button </button>
+      </div>
+
+    <!--Submit Button-->  
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-
     <script src="client/js/jquery/jquery-3.2.1.min.js"></script>
     <script src="client/js/bootstrap/bootstrap.min.js"></script>
     <script src="client/js/aelyt/aelyt.js"></script>
