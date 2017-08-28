@@ -15,73 +15,70 @@
 	</head>
 	
 	<body background-color: #fff;>
-			<div class="jumbotron text-center">
-			  <h1>AELYT Music Player</h1>
-			  <p>@aenany, @jhkang</p>  				  
-			</div>
+		<div class="jumbotron text-center">
+			<h1>AELYT Music Player</h1>
+			<p>@aenany, @jhkang</p>  				  
+		</div>
 
-			<div class="jumbotron">
-	  
-					<div>
-						  <button id="playButton" class="button btn btn-primary"> START </button>
-					</div>
-				  
-					  <div>
-						  <button id="stopButton" class="button btn btn-danger"> STOP </button>
-					  </div>
-		  
-					  <div id="output"></div>
-						
-				  </div>
-				  
-			  
-			<nav class="navbar navbar-inverse">
-			  <div class="container-fluid">
-			  <div class="navbar-header">
-				<a class="navbar-brand" href="#">Music</a>
-			  </div>
-				<ul class="nav navbar-nav">
-				  <li class="active"><a href="#">Home</a></li>
-				  <li><a href="#">Page 1</a></li>
-				  <li><a href="#">Page 2</a></li>
-				</ul>
-				  <form class="navbar-form navbar-left">
-							<div class="form-group">
-							  <input id="searchBar" type="text" class="form-control" placeholder="Search YouTube">
-							</div>
-							<button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i> </button>
-						  </form>
-						</div>
-					  </nav>
-		
-				<div class="container">
-					<div class="row">
-					  <div class="col-sm-4">
-						<h3>Column 1</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-					  </div>
-					  <div class="col-sm-4">
-						<h3>Column 2</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-					  </div>
-					  <div class="col-sm-4">
-						<h3>Column 3</h3>        
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-					  </div>
-					</div>
+		<div class="jumbotron">			
+			<div>
+				<button id="playButton" class="button btn btn-primary"> START </button>
+				<button id="stopButton" class="button btn btn-danger"> STOP </button>							
+				<button id="popupButton" class="button btn btn-success"> POPUP </button>				
+			</div>			
+			<br><br>
+			<div id="output"></div>					
+		</div>
+				
 			
+		<nav class="navbar navbar-inverse">
+			<div class="container-fluid">
+			<div class="navbar-header">
+			<a class="navbar-brand" href="#">Music</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Page 1</a></li>
+				<li><a href="#">Page 2</a></li>
+			</ul>
+				<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input id="searchBar" type="text" class="form-control" placeholder="Search YouTube">
+						</div>
+						<button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i> </button>						  </form>
+					</div>
+					</nav>
+	
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4">
+					<h4 id="searchOutputCaption"></h4>
+					<p id="searchOutputPhrase"></p>
+					<p id="searchOutputResults"></p>
+					</div>
+					<div class="col-sm-4">
+					<h3>Column 2</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+					</div>
+					<div class="col-sm-4">
+					<h3>Column 3</h3>        
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+					<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+					</div>
+				</div>
 		
-			<!--Submit Button-->  
-			<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-			<script src="client/js/jquery/jquery-3.2.1.min.js"></script>
-			<script src="client/js/bootstrap/bootstrap.min.js"></script>
-			<script src="client/js/ui/ui.js"></script>
-			<script src="client/js/ui/functions.js"></script>			
-			<script src="client/js/aelyt/aelyt.js"></script>
+		<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/popper.min.js"></script>				
 		
-			<script>if (window.module) module = window.module;</script>
-		  </body>
-		</html>
+		<script src="client/js/jquery/jquery-3.2.1.min.js"></script>
+		<script src="client/js/bootstrap/bootstrap.min.js"></script>
+		<script src="client/js/bootbox/bootbox.min.js"></script>
+		<script src="client/js/ui/ui.js"></script>
+		<script src="client/js/ui/functions.js"></script>			
+		<script src="client/js/ui/events.js"></script>						
+		<script src="client/js/aelyt/aelyt.js"></script>
+	
+		<script>if (window.module) module = window.module;</script>
+	</body>
+</html>
