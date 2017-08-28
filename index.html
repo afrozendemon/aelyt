@@ -8,84 +8,80 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="client/css/boostrap/bootstrap.min.css"/>
 		<link rel="stylesheet" href="client/css/darkly/darkly.min.css">    
+
+		<!-- Font-Awesome Icons -->
+		<link rel="stylesheet" href="client/css/font-awesome/font-awesome-4.7.0/css/font-awesome.min.css"> 		
 		
 	</head>
 	
-	<body>
-		<h1>Hello, world!</h1>
-		<h2>Ahmad Enany and Jason Kang</h2>
-		<p>SPOTIFY TEST 1 2 3 4 5 6 7 8 9 FONT</p>
+	<body background-color: #fff;>
+			<div class="jumbotron text-center">
+			  <h1>AELYT Music Player</h1>
+			  <p>@aenany, @jhkang</p>  				  
+			</div>
 
-		<h3>L O L O L O L O L O L </h3>
-<div class="container-fluid">
-	
-	<div class="row">
-		<div>
-			<button id="playButton" class="button btn btn-default btn-sm"> START YT STREAM </button>
-		</div>
-
-    <!-- Imported Darkly Theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap-theme.min.css"/>
-  </head>
-    
-  <body background-color: #fff;>
-    <div class="jumbotron text-center">
-      <h1>Electron App</h1>
-      <p>Ahmad Enany and Jason Kang</p>  
-    </div>
-      
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="#">Music</a>
-      </div>
-        <ul class="nav navbar-nav">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Page 1</a></li>
-          <li><a href="#">Page 2</a></li>
-        </ul>
-          <form class="navbar-form navbar-left">
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Search">
-                    </div>
-                    <button type="submit" class="btn btn-default">Submit</button>
-                  </form>
-                </div>
-              </nav>
-
-        <div class="container">
-            <div class="row">
-              <div class="col-sm-4">
-                <h3>Column 1</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              </div>
-              <div class="col-sm-4">
-                <h3>Column 2</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              </div>
-              <div class="col-sm-4">
-                <h3>Column 3</h3>        
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
-                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
-              </div>
-            </div>
-    
-      <div>
-        <button id="clickButton" class="button btn btn-primary"> CLICK ME TO SIGNAL TO THE MAIN PROCESS </button>
-      </div>
-
-      <div>
-        <button id="playButton" class="button btn btn-primary"> play button </button>
-      </div>
-
-    <!--Submit Button-->  
-    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-    <script src="client/js/jquery/jquery-3.2.1.min.js"></script>
-    <script src="client/js/bootstrap/bootstrap.min.js"></script>
-    <script src="client/js/aelyt/aelyt.js"></script>
-
-    <script>if (window.module) module = window.module;</script>
-  </body>
-</html>
+			<div class="jumbotron">
+	  
+					<div>
+						  <button id="playButton" class="button btn btn-primary"> START </button>
+					</div>
+				  
+					  <div>
+						  <button id="stopButton" class="button btn btn-danger"> STOP </button>
+					  </div>
+		  
+					  <div id="output"></div>
+						
+				  </div>
+				  
+			  
+			<nav class="navbar navbar-inverse">
+			  <div class="container-fluid">
+			  <div class="navbar-header">
+				<a class="navbar-brand" href="#">Music</a>
+			  </div>
+				<ul class="nav navbar-nav">
+				  <li class="active"><a href="#">Home</a></li>
+				  <li><a href="#">Page 1</a></li>
+				  <li><a href="#">Page 2</a></li>
+				</ul>
+				  <form class="navbar-form navbar-left">
+							<div class="form-group">
+							  <input id="searchBar" type="text" class="form-control" placeholder="Search YouTube">
+							</div>
+							<button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i> </button>
+						  </form>
+						</div>
+					  </nav>
+		
+				<div class="container">
+					<div class="row">
+					  <div class="col-sm-4">
+						<h3>Column 1</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+					  </div>
+					  <div class="col-sm-4">
+						<h3>Column 2</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+					  </div>
+					  <div class="col-sm-4">
+						<h3>Column 3</h3>        
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+						<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris...</p>
+					  </div>
+					</div>
+			
+		
+			<!--Submit Button-->  
+			<script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+			<script src="client/js/jquery/jquery-3.2.1.min.js"></script>
+			<script src="client/js/bootstrap/bootstrap.min.js"></script>
+			<script src="client/js/ui/ui.js"></script>
+			<script src="client/js/ui/functions.js"></script>			
+			<script src="client/js/aelyt/aelyt.js"></script>
+		
+			<script>if (window.module) module = window.module;</script>
+		  </body>
+		</html>
