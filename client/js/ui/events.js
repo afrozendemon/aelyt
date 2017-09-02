@@ -26,11 +26,20 @@ UI.prototype.attachEventHandlers = function() {
 		currentUI.functions.delay(function(){
 			currentUI.searchOutputCaption.text('Search results for: ');
 			currentUI.searchOutputPhrase.text(input);
-			console.log(input);
-			currentUI.searchOutputResults.html('DATA');
+			ipcRenderer.send('youtube-search-phrase', input);
+			ipcRenderer.on('youtube-search-phrase-reply', (event, arg) => {
+				// console.log(JSON.stringify(event,null,2));
+				// console.log(JSON.stringify(arg,null,2));				
+				currentUI.searchOutputResults.html(arg);				
+			});		
+			// currentUI.searchOutputResults.html('DATA');
 		}, 2500);
 		
 	});    
+
+	currentUI.searchBar.submit(function(e){
+		e.preventDefault();
+	});
 
 	currentUI.popupButton.on('click', function(){
 		bootbox.alert('This is an alert message');
