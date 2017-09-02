@@ -12,7 +12,6 @@ const ytApiKey = 'AIzaSyBpkKekU8NhvtCT9UMz5S1ZtjwkPa0GQDg'
 
 yt.setKey(ytApiKey);
 
-
 ipcMain.on('asynchronous-message', (event, arg) => {
     console.log(arg);
     event.sender.send('asynchronous-reply', 'pong');

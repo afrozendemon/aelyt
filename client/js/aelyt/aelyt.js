@@ -9,7 +9,6 @@
 
 let applicationUI = null;
 
-
 $(document).ready(() => {
     console.log('Loading DOM Controller.');
     applicationUI = new UI();

@@ -3,14 +3,14 @@
 // All clientside DOM event handler code will go here. (button clicks, mouse hovers etc)
 
 UI.prototype.attachEventHandlers = () => {
-	var currentUI = this;
+	let currentUI = this;
 
 	currentUI.playButton.on('click', () => {
 
 		currentUI.functions.displayLoader(currentUI.output);        
 
-		var url = 'https://www.youtube.com/watch?v=7-qGKqveZaM';
-		var id = '7-qGKqveZaM'
+		let url = 'https://www.youtube.com/watch?v=7-qGKqveZaM';
+		let id = '7-qGKqveZaM'
 	
 		ytdl.getInfo(id, (err, info) => {
 			if (err) throw err;
@@ -20,7 +20,7 @@ UI.prototype.attachEventHandlers = () => {
 	});
 	
 	currentUI.searchBar.keyup( () => {
-		var input =  $.trim(this.value);
+		let input =  $.trim(this.value);
 
 		currentUI.searchOutputCaption.text('Searching...');
 		currentUI.searchOutputPhrase.text('');
