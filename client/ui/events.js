@@ -1,18 +1,17 @@
+// UI / DOM event handlers are defined here.
+
 UI.prototype.attachEventHandlers = function() {
 	var currentUI = this;
 
 	currentUI.playButton.on('click', function(){
 
-		currentUI.functions.displayLoader(currentUI.output);        
-		console.log('playing...');
-
-		let url = 'https://www.youtube.com/watch?v=7-qGKqveZaM';
+		currentUI.functions.displayLoader(currentUI.output);
+		
 		let id = '7-qGKqveZaM'
 	
-		ytdl.getInfo(id, (err, info) => {
-			if (err) throw err;
-			currentUI.output.html('<pre><code>' + JSON.stringify(info,null,2) + '</pre></code>');
-		});	
+		api.getYoutubeVideoInfoById(id, function(data){
+			currentUI.output.html('<pre><code>' + JSON.stringify(data,null,2) + '</pre></code>');		
+		})
 	
 	});
 	
@@ -21,18 +20,17 @@ UI.prototype.attachEventHandlers = function() {
 
 		currentUI.searchOutputCaption.text('Searching...');
 		currentUI.searchOutputPhrase.text('');
+
 		currentUI.functions.displayLoader(currentUI.searchOutputResults);
 
 		currentUI.functions.delay(function(){
 			currentUI.searchOutputCaption.text('Search results for: ');
 			currentUI.searchOutputPhrase.text(input);
-			ipcRenderer.send('youtube-search-phrase', input);
-			ipcRenderer.on('youtube-search-phrase-reply', (event, arg) => {
-				// console.log(JSON.stringify(event,null,2));
-				// console.log(JSON.stringify(arg,null,2));				
-				currentUI.searchOutputResults.html(arg);				
-			});		
-			// currentUI.searchOutputResults.html('DATA');
+
+			api.searchYoutubeByPhrase(input, function(data){
+				currentUI.searchOutputResults.html(data)
+			});
+
 		}, 2500);
 		
 	});    
@@ -45,11 +43,8 @@ UI.prototype.attachEventHandlers = function() {
 		bootbox.alert('This is an alert message');
 	});
 
-	currentUI.stopButton.on('click', function(){
-		console.log('stopping...');
-	
-		currentUI.output.empty();
-	
+	currentUI.stopButton.on('click', function(){		
+		currentUI.output.empty();	
 	});
 	
 };
