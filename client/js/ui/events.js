@@ -1,10 +1,13 @@
-UI.prototype.attachEventHandlers = function() {
+// Extension of the UI object, found in ui.js
+
+// All clientside DOM event handler code will go here. (button clicks, mouse hovers etc)
+
+UI.prototype.attachEventHandlers = () => {
 	var currentUI = this;
 
-	currentUI.playButton.on('click', function(){
+	currentUI.playButton.on('click', () => {
 
 		currentUI.functions.displayLoader(currentUI.output);        
-		console.log('playing...');
 
 		var url = 'https://www.youtube.com/watch?v=7-qGKqveZaM';
 		var id = '7-qGKqveZaM'
@@ -16,40 +19,34 @@ UI.prototype.attachEventHandlers = function() {
 	
 	});
 	
-	currentUI.searchBar.keyup(function(){
+	currentUI.searchBar.keyup( () => {
 		var input =  $.trim(this.value);
 
 		currentUI.searchOutputCaption.text('Searching...');
 		currentUI.searchOutputPhrase.text('');
 		currentUI.functions.displayLoader(currentUI.searchOutputResults);
 
-		currentUI.functions.delay(function(){
+		currentUI.functions.delay( () => {
 			currentUI.searchOutputCaption.text('Search results for: ');
 			currentUI.searchOutputPhrase.text(input);
 			ipcRenderer.send('youtube-search-phrase', input);
 			ipcRenderer.on('youtube-search-phrase-reply', (event, arg) => {
-				// console.log(JSON.stringify(event,null,2));
-				// console.log(JSON.stringify(arg,null,2));				
 				currentUI.searchOutputResults.html(arg);				
 			});		
-			// currentUI.searchOutputResults.html('DATA');
+
 		}, 2500);
 		
 	});    
 
-	currentUI.searchBar.submit(function(e){
+	currentUI.searchBar.submit = (e) => {
 		e.preventDefault();
+	}
+
+	currentUI.popupButton.on('click', () => {
 	});
 
-	currentUI.popupButton.on('click', function(){
-		bootbox.alert('This is an alert message');
-	});
-
-	currentUI.stopButton.on('click', function(){
-		console.log('stopping...');
-	
+	currentUI.stopButton.on('click', () => {
 		currentUI.output.empty();
-	
 	});
 	
 };
