@@ -1,5 +1,7 @@
+//This object will handle playback of audio.
+
 function mainPlayer() {
-    this.playerName = 'AELYT Player'
+    this.playerName = 'Audio Player'
 }
 
 mainPlayer.prototype.printMessage = function () {

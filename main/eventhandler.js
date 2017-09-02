@@ -1,7 +1,11 @@
+// Main process event handler.
+// Listens for synchronous and asynchronous messages from the client api.
+
 const {ipcMain} = require('electron');
 const YouTube = require('youtube-node');
 const yt = new YouTube();
 const ytApiKey = 'AIzaSyBpkKekU8NhvtCT9UMz5S1ZtjwkPa0GQDg'
+
 yt.setKey(ytApiKey);
 
 ipcMain.on('asynchronous-message', (event, arg) => {
