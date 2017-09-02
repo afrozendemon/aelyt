@@ -1,15 +1,15 @@
-// Commonly used UI functions.
+// Commonly used UI functions will be stored here.
 
 UI.prototype.functions = {};
 
-UI.prototype.functions.displayLoader = (element) => {
-	let currentUI = this;
+UI.prototype.functions.displayLoader = function (element) {
+	var currentUI = this;
 
 	element.html('<i class="fa fa-refresh fa-spin fa-fw fa-2x"></i>');
 };
 
-UI.prototype.functions.delay = (() => {
-	let currentUI = this;
+UI.prototype.functions.delay = (function(){
+	var currentUI = this;
 
     let timer = 0;
 

@@ -1,15 +1,7 @@
-// Main process event handlers.
-
-/* 
-The client talks to the backend to fetch data from here.
-This can be considered the API into the main electron process.
- */
-
 const {ipcMain} = require('electron');
 const YouTube = require('youtube-node');
 const yt = new YouTube();
 const ytApiKey = 'AIzaSyBpkKekU8NhvtCT9UMz5S1ZtjwkPa0GQDg'
-
 yt.setKey(ytApiKey);
 
 ipcMain.on('asynchronous-message', (event, arg) => {

@@ -1,13 +1,10 @@
-// Extension of the UI object, found in ui.js
+UI.prototype.attachEventHandlers = function() {
+	var currentUI = this;
 
-// All clientside DOM event handler code will go here. (button clicks, mouse hovers etc)
-
-UI.prototype.attachEventHandlers = () => {
-	let currentUI = this;
-
-	currentUI.playButton.on('click', () => {
+	currentUI.playButton.on('click', function(){
 
 		currentUI.functions.displayLoader(currentUI.output);        
+		console.log('playing...');
 
 		let url = 'https://www.youtube.com/watch?v=7-qGKqveZaM';
 		let id = '7-qGKqveZaM'
@@ -19,34 +16,40 @@ UI.prototype.attachEventHandlers = () => {
 	
 	});
 	
-	currentUI.searchBar.keyup( () => {
-		let input =  $.trim(this.value);
+	currentUI.searchBar.keyup(function(){
+		var input =  $.trim(this.value);
 
 		currentUI.searchOutputCaption.text('Searching...');
 		currentUI.searchOutputPhrase.text('');
 		currentUI.functions.displayLoader(currentUI.searchOutputResults);
 
-		currentUI.functions.delay( () => {
+		currentUI.functions.delay(function(){
 			currentUI.searchOutputCaption.text('Search results for: ');
 			currentUI.searchOutputPhrase.text(input);
 			ipcRenderer.send('youtube-search-phrase', input);
 			ipcRenderer.on('youtube-search-phrase-reply', (event, arg) => {
+				// console.log(JSON.stringify(event,null,2));
+				// console.log(JSON.stringify(arg,null,2));				
 				currentUI.searchOutputResults.html(arg);				
 			});		
-
+			// currentUI.searchOutputResults.html('DATA');
 		}, 2500);
 		
 	});    
 
-	currentUI.searchBar.submit = (e) => {
+	currentUI.searchBar.submit(function(e){
 		e.preventDefault();
-	}
-
-	currentUI.popupButton.on('click', () => {
 	});
 
-	currentUI.stopButton.on('click', () => {
+	currentUI.popupButton.on('click', function(){
+		bootbox.alert('This is an alert message');
+	});
+
+	currentUI.stopButton.on('click', function(){
+		console.log('stopping...');
+	
 		currentUI.output.empty();
+	
 	});
 	
 };
